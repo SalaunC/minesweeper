@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+
+    <style type="text/css">
+        html,
+        body {
+        margin: 0;
+        overflow: hidden;
+        height: 100%;
+        }
+
+        /* Scale canvas with resize attribute to full size */
+        canvas[resize] {
+            width: 100%;
+            height: 100%;
+        }
+
+        .gameboard{
+            position: relative;
+            margin: 0 auto;
+            top: 100px;
+            width: 800px;
+            height: 550px;
+        }
+
+        .booosto{
+
+            position: fixed;
+            bottom: 10px;
+            right: 50px;
+        }
+
+        .BalanceBreaker{
+
+            position: fixed;
+            top: 10px;
+            left: 50px;
+
+        }
+
+    </style>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.9.25/paper-full.js"></script>
+        <script type="text/paperscript"  src="app.js" canvas="myCanvas"></script>
+
+    </head>
+    
+    <body>
+
+        <div class="gameboard"> <canvas  id="myCanvas" resize keepalive></canvas> </div>
+
+        <div style="padding:5px;">
+            <a class="waves-effect waves-light btn green" id="restart_easy">Easy</a>
+        </div>
+        <div style="padding:5px;">
+            <a class="waves-effect waves-light btn cyan" id="restart_normal">Normal</a>
+        </div>
+        <div style="padding:5px;">
+            <a class="waves-effect waves-light btn deep-orange accent-2" id="restart_hard">Hard</a>
+        </div>
+
+
+
+    </body>
+
+</html>
